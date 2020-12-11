@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>faculty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="shared/style.css">
+    <link rel="stylesheet" href="demo_1/style.css">
+</head>
+<style type="text/css">
+
+.form-control {
+    display: block;
+    width: 88%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.56rem 1.375rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+input[type=text], input[type=password], select {
+  width: 88%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body style="height: 1413px;">
+<div class="col-md-6 grid-margin stretch-card" >
+                <div class="card" style="width: 100%;min-width: 203%; ">
+                  <div class="card-body"  style="width: 100%;  height: 1165px;">
+                    <h4 class="card-title">FACULTY</h4>
+                    <p class="card-description">Upload Faculty details</p>
+                  <form class="forms-sample" style="height: 100%" method="post" action="facultydetails.php">
+                    <div class="row" style="padding-left:20px; width: 47%; ">
+                    <div class="col-50" style="width: 50%;">
+                      <div class="form-group">
+                        
+                        <label for="fname">Faculty Name:</label><br>
+                        <input type="text" id="fname" name="facultyname" placeholder="Your name.."><br><br>
+                      </div>
+                      <div class="form-group">
+                        <label for="Profile Pic">Profile Pic:</label>
+                        <input type="file" id="file" name="profile" placeholder=" Upload Photo.."><br><br>
+                      </div>
+                      <div class="form-group">
+                         <label for="F ID"> Faculty ID:</label><br>
+                         <input type="text" id="fid" name="facultyid" placeholder="Your ID.."><br>
+
+                      </div>
+                      <div class="form-group">
+                        <label for="Designation">Designation:</label><br>
+                        <select id="Designation" name="Designation">
+                          <option value="ASSOCIATE PROFESSOR">Associate Professor</option>
+                          <option value="ASSISTANT PROFESSOR">Assistant Professor</option>
+                          <option value="PROFESSOR">Professor</option>
+                          <option value="HOD">Head of the Department</option>
+                          <option value="PRINCIPAL">Principal</option>
+                          <option value="ADMIN">Admin</option>
+                        </select><br>
+                      </div>
+                      <div class="form-group">
+                        <label for ="dob">Date Of Birth:</label><br><br>
+                       <input type="date" id="dob" name="dob"><br><br>
+                      </div>
+                      <div class="form-group">
+                        <label for ="e-mail"> E-Mail ID:</label><br>
+                        <input type="email" id="e-mail" name="email" placeholder="Enter Your ID"><br>
+                      </div>                      <div class="form-group">
+                        <label for ="anna univi id">Anna University ID:</label><br>
+                        <input type="text" id="auid" name="auid" placeholder="Enter Your ID"><br>
+                      </div>
+                      <div class="form-group">
+                        <label for ="Address">Address:</label><br>
+                        <input type="text" id="address" name="address" placeholder="Enter Your Address"><br>
+                      </div>
+
+                      <div class="form-group">
+                        <label for ="Address">city</label><br>
+                        <input type="text" id="city" name="city" placeholder="Enter Your city"><br>
+                      </div>
+                      
+
+                     </div>
+                    </div>
+                    <div class="row" style="width:50%; position: relative;left: 590px;bottom:915px;">
+
+                    <div class="col-50"style="width:50%;">
+                      <div class="form-group">
+                        <label for ="anna univi id">Anna University ID:</label><br>
+                        <input type="text" id="auid" name="auid" placeholder="Enter Your ID"><br>
+                      </div>
+                      <div class="form-group">
+                        <label for ="Address">Address:</label><br>
+                        <input type="text" id="address" name="address" placeholder="Enter Your Address"><br>
+                      </div>
+
+                      <div class="form-group">
+                        <label for ="Address">city</label><br>
+                        <input type="text" id="city" name="city" placeholder="Enter Your city"><br>
+                      </div>
+                      <div class="form-group">
+                        <label for ="PanCard Number">PANcard number:</label><br>
+                        <input type="text" id="PanCard Number" name="pancardno" placeholder="Enter Your No"><br>
+                      </div>
+                                            <div class="form-group">
+                        <label for ="aadhar Number">Aadhar number:</label><br>
+                        <input type="text" id="Aadharmo Number" name="aadharno" placeholder="Enter Your No"><br>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for ="Mobile No"> Mobile Number:</label><br>
+                        <input type="text" id="Mobile no" name="mobileno" placeholder="Enter Your No"><br>
+                      </div>
+                      <div class="form-group">
+                        
+                      </div>
+                      <div class="form-group">
+                        <label for ="date of joining"> Date Of Joining:</label><br><br>
+                        <input type="date" id="date" name="dateofjoining">
+                      </div>
+                                            <div class="form-group">
+                        <label for ="experience">Experience:</label><br>
+                        <input type="text" id="experience" name="experience" placeholder="Enter Your Year of Experience.."><br>
+                      </div>
+                                            <div class="form-group">
+                        <label for ="department">Department:</label><br>
+                        <input type="text" id="Department" name="department" placeholder="Enter Your department.."><br>
+                      </div>
+                                                                  <div class="form-group">
+                        <label for ="releving">Date of Releving:</label><br>
+                        <input type="date" id="releving" name="releving"><br>
+                      </div>
+                     
+                      <div class="form-group">
+                        <label for ="certificates">Certificates Collected:</label><br>
+                        <input type="text" id="certificates" name="certificates" placeholder="Enter the List.."><br>
+                      </div>
+                      
+                     
+                        
+                      <style type="text/css">
+                        .button1{
+                            background-color: #03a9f4; /* Green */
+                            border: none;
+                            color: white;
+                            padding-left: 20px;
+                            padding-top: 7px;
+                            padding-right: 20px;
+                            padding-bottom: 7px;
+                            border-radius: 8px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            margin: 4px 2px;
+                            cursor: pointer;
+                        }
+                        </style>
+                </div>
+          
+            </div>
+        <button class="button1" value="submit" name="submit" style=" position: fixed;
+    left: 963px;
+    top: 762px;">UPLOADE</button>
+
+        </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

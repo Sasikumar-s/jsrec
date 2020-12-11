@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+
+
+input.invalid {
+  background-color: #f5f8f900;
+}
+
+
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+
+.step.finish {
+  background-color: #4CAF50;
+}
+</style>
+<body>
+    <form id="regForm" action="/action_page.php">
+    <h1>Register:</h1>
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">Name:
+       <label for="fname">Student Name:</label>
+       <input type="text" id="sname" name="Name" placeholder="Your Name.." required><br><br>
+       <label for="Profile Pic">Profile Pic:</label>
+       <input type="file" id="file" name="file" required="fill this field"><br><br>
+       <label for="S ID"> Student Roll Number:</label><br>
+       <input type="text" id="sid" name="studentid" placeholder="Your ID.." required><br>
+       <label for="degree"> Degree:</label><br>
+       <input type="text" id="degree" name="degree" placeholder="Your Degree.." required><br>
+       <label for="Dept">Department:</label>
+       <select id="dept" name="Department" style="width: 100%;height: 48px;" required>
+          <option value="cse">CSE</option>
+          <option value="ece">ECE</option>
+          <option value="eee">EEE</option>
+          <option value="mech">MECH</option>
+          <option value="civil">CIVIL</option>
+          <option value="fT">FT</option>
+        </select><br><br>
+        <label for="batch"> Enrolled on:</label>
+        <input type="month" name="month" id="year" placeholder="Enter .." required><br>
+    </div>
+  <div class="tab">Contact Info:
+    <label for ="dob">Date of Birth:</label><br><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+    <label for ="register number">Register Number:</label>
+    <input type="text" id="auid" name="Anna University ID" placeholder="Enter Your ID.."required><br>
+    <label for="blood group">Blood Group:</label>
+    <select id="blood group" name="blood group"    style="width: 100%;height: 46px;" required>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select><br><br>
+    <label for ="Address">Address:</label><br><br>
+    <textarea  rows="5" cols="82" placeholder="Type your Address"></textarea><br>
+    <label for ="city"> City:</label><br>
+    <input type="text" id="city" name="city" placeholder="Enter City.." required><br>
+    <label for ="Mobile No"> Mobile Number:</label><br>
+    <input type="text" id="Mobile no" name="Mobile no" maxlength="10" placeholder="Enter Your No.."required><br>
+  </div>
+</div>
+  <div class="tab">
+    <label for ="e-mail"> E-Mail ID:</label><br>
+    <input type="text" id="e-mail" name="e-mail" placeholder="Enter Your ID.." required><br>
+    <label for ="community"> Community:</label><br>
+    <select id="community" name="community"required>
+      <option value="fc">FC</option>
+      <option value="bc">BC</option>
+      <option value="mbc">MBC</option>
+      <option value="bcm">BCM</option>
+      <option value="sc/st">SC/ST</option>
+      <option value="others">Others</option>
+    </select><br><br>
+    <label for ="Management/gov">Management/Government Quota:</label><br><br>
+    <input type="Radio" id="mq" name="q" value="mq">MQ
+    <input type="Radio" id="gq" name="q" value="gq">GQ<br><br><br>
+    <label for="">Days Scholar/Hosteler:</label><br><br>
+    <input type="radio" id="daysscholar" name="type" value="daysscholar" onclick="myFunction()">
+    <label for="daysscholar" required>Days scholar</label>
+    <input type="radio" id="hosteller" name="type" value="hosteller" onclick="myFunction()" required>
+    <label for="hosteller">Hosteler</label><br><br>
+    <label for="myCheck">Busno:<label>
+    <input type="textbox" id="busno" name="busno" placeholder="Enter No.. "  required><br>
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("hosteller");
+  var text = document.getElementById("busno");
+  if (checkBox.checked == true){
+    text.disabled = true;
+  } 
+  else
+  {text.disabled = false;
+  }
+}
+</script><br>
+    <label for ="aadharno">Aadhar Number:</label><br>
+    <input type="text"  id="aadharno" name="aadharno" maxlength="16" placeholder="Enter Your No.." required><br>
+    <label for ="cutoff"> Cut-Off Mark:</label><br>
+    <input type="text" id="cutoff" name="cutoff" placeholder="Enter Your Mark.." required><br>
+    <label>First Graduate:</label> 
+    <input type="radio" id="Yes" name="Y/N">Yes
+    <input type="radio" id="no" name="Y/N">No<br><br>
+</div>
+  <div class="tab">Login Info:
+  <label for ="school name">School Name:</label><br>
+  <input type="text" id="school name" name="school name" placeholder="Enter Your school.." required><br>
+  <label>Medium of Study:</label>>
+  <input type="radio" id="english" name="medium">English
+  <input type="radio" id="tamil" name="medium">Tamil<br><br><br>
+  <label for="father name">Father's Name</label><br>
+  <input type="text" id="father name" name="father name" placeholder="Enter Name.." required><br>
+  <label for="mother name">Mother's Name</label><br>
+  <input type="text" id="mother name" name="mother name" placeholder="Enter Name.." required><br>
+  <label for ="contactno"> Contact No:</label><br>
+  <input type="text" id="contactno" name="contactno" maxlength="10" placeholder="Enter Your Number.." required><br>
+  <center><input type="submit" value="submit"></center>
+</div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+</form>
+
+<script>
+var currentTab = 0; 
+showTab(currentTab); 
+
+function showTab(n) {
+  
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+  
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ background-color:#bbb0;
+}
+th{
+    background-color:#fdfdfd;
+    color: #000000;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;display: block;
+    text-align: left;
+  }
+}
+/* The container */
+.container {
+  width: 5px;
+  height: 5px;
+  border-radius:2.5px; 
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 220px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}.content {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.content input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 100px;
+    background-color: #eee;
+    border-radius: 10%;
+    background-size:cover;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.content:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: green;
+}.content input:checked ~ .checkmark {
+    background-color: red;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.content:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+     top: 0px;
+    left: 0px;
+    width: 5px;
+    height: 5px;
+    border-radius:2.5px;
+    
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #eee;
+    border-radius: 100%;
+    background-size: cover;
+}
+table {
+    width:100%;
+    height:auto;
+    border-style:outset ;
+    opacity:0.9;
+    
+}
+div{
+    opacity:0.9;
+}
+th{
+    background-color:#000;
+    color:#ffffff;
+}
+#sub{
+    background-color:green;
+    box-shadow:5px 5px 19px #000;
+    border-color:green;
+    border-radius:5px;
+    text-transform:capitalize;
+    width:100%;
+    height:auto;
+}#res{
+    background-color:red;
+    box-shadow:5px 5px 19px #000;
+    border-color:red;
+    border-radius:5px;
+    text-transform:capitalize;
+    width:100%;
+    height:auto;
+}
+</style>
+    </head>
+    <body><form>
+        <div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div style="padding-left:16px">
+  <table rowspan="20px" padding="13px"  border="1px"><div>
+<tr><th>ROLL NO</th><th>PRESENT</th><th>ABSENT</th></tr>
+<tr><td>1</td>
+<td><label class="container"><input type="radio"name="1"><span class="checkmark"></span></label>
+</td>
+<td><label class="content"><input type="radio" name="1"><span class="checkmark"></span></label></td></tr>
+<tr><td>2</td>
+<td><label class="container"><input type="radio" name="2"><span class="checkmark"></span></label>
+</td>
+<td><label class="content"><input type="radio" name="2"><span class="checkmark"></span></label></td></tr>
+<tr><td>3</td><td><label class="container"><input type="radio" name="3"><span class="checkmark"></span></label></td>
+<td><label class="content"><input type="radio" name="3"><span class="checkmark"></span></label></td></tr>
+<tr><td>4</td>
+<td><label class="container"><input type="radio" name="4"><span class="checkmark"></span></label>
+</td>
+          <td><label class="content">
+  <input type="radio" name="4">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>5</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="5">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="5">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>6</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="6">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="6">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>7</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="7">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="7">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>8</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="8">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="8">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>9</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="9">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="9">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>10</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="10">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="10">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>11</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="11">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="11">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>12</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="12">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="12">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>13</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="13">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="13">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>14</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="14">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="14">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>15</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="15">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="15">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>16</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="16">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="16">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>17</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="17">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="17">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>18</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="18">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="18">
+  <span class="checkmark"></span>
+</label></td>
+      </tr></div>
+  </table><br><center><div id ="button">
+<input type="submit" value="submit" id="sub" ><hr noshade width="1px">
+<input type="reset" id="res"></div></center>
+</form>
+
+    </body>
+<script type="text/javascript">
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+    </script>
+</html>

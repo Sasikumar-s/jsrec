@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  right:100px;
+  width:960px;
+  height:509px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  right:100px;
+  width:960px;
+  height:509px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+
+</style>
+</head>
+<body style="width:967;height:509; right:100px;">
+<p>add your payment details</p>
+<div class="row">
+  <div class="col-75">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <label for="fname">Student Name:</label>
+           <input type="text" id="sname" name="Name" placeholder="Your Name.."><br><br>
+           <label for="Profile Pic">Profile Pic:</label>
+           <input type="file" id="file" name="file" placeholder=" Upload Photo.."><br><br>
+           <label for ="register number">Register Number:</label>
+           <input type="text" id="auid" name="Anna University ID" placeholder="Enter Your ID.."><br>
+           <label for="S ID"> Student Roll Number:</label><br>
+           <input type="text" id="sid" name="studentid" placeholder="Your ID.."><br>
+           <label for ="e-mail"> E-Mail ID:</label><br>
+           <input type="text" id="e-mail" name="e-mail" placeholder="Enter Your ID.."><br>
+           <label for ="Mobile No"> Mobile Number:</label><br>
+           <input type="text" id="Mobile no" name="Mobile no" maxlength="10" placeholder="Enter Your No.."><br>
+           <label for ="dob">Date Of Birth:</label><br><br>
+           <input type="date" id="dob" name="dob"><br><br>
+           <label>Address:></label><br><br>
+           <textarea  rows="5" cols="82" placeholder="Type your Address"></textarea><br>
+           <label for ="city"> City:</label><br>
+           <input type="text" id="city" name="city" placeholder="Enter City.."><br>
+           <label for="degree"> Degree:</label><br>
+           <input type="text" id="degree" name="degree" placeholder="Your Degree.."><br>
+
+            <div class="row">
+              <div class="col-50">
+                 <label for="Dept">Department:</label>
+    <select id="dept" name="Department">
+      <option value="cse">CSE</option>
+      <option value="ece">ECE</option>
+      <option value="eee">EEE</option>
+        <option value="mech">MECH</option>
+          <option value="civil">CIVIL</option>
+          <option value="fT">FT</option>
+
+    </select><br><br>
+  
+
+    <label for ="cutoff"> Cut-Off Mark:</label><br>
+    <input type="text" id="cutoff" name="cutoff" placeholder="Enter Your Mark.."><br>
+        First Graduate:
+        <input type="radio" id="Yes" name="Y/N">Yes
+
+        <input type="radio" id="no" name="Y/N">No
+
+    <label for ="Management/gov">Management quota/Government quota:</label><br><br>
+
+    <input type="Radio" id="mq" name="q" value="mq">MQ
+            
+    <input type="Radio" id="gq" name="q" value="gq">GQ<br><br><br>
+
+    <label for ="days/host">Days Scholar/Hostler:</label><br><br>
+    </div>
+</div>
+  <div class="col-50">
+    <input type="radio" id="daysscholar" name="scholar">Days Scholar
+
+    <input type="radio" id="hosteler" name="scholar">Hosteler<br><br><br>    
+
+    <label for="batch"> Enrolled on:</label>
+    <select id="batch" name="Batch">
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
+        <option value=""></option>
+          <option value=""></option>
+    </select><br>
+
+ <label for="blood group">Blood Group:</label>
+    <select id="blood group" name="blood group">
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+       <option value="B-">B-</option>
+        <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+    </select><br><br>
+
+        Address:<br><br>
+        <textarea  rows="5" cols="82" placeholder="Type your Address"></textarea><br>
+        <label for ="city"> City:</label><br>
+        <input type="text" id="city" name="city" placeholder="Enter City.."><br>
+  <div class="row">
+  <div class="col-50">
+                
+
+
+<label for ="community"> Community:</label><br>
+    <select id="community" name="community">
+      <option value="fc">FC</option>
+      <option value="bc">BC</option>
+      <option value="mbc">MBC</option>
+      <option value="bcm">BCM</option>
+        <option value="sc/st">SC/ST</option>
+        <option value="others">Others</option>
+      </select><br><br>
+
+
+      <label for="bus no">Bus No:</label><br>
+      <input type="text" id="bus no" name="bus no" placeholder="Enter Bus No.."><br>
+
+      
+          <label for ="aadharno">Aadhar Number:</label><br>
+    <input type="text"  id="aadharno" name="aadharno" maxlength="16" placeholder="Enter Your No.."><br>
+
+
+
+
+    <label for ="school name">School Name:</label><br>
+    <input type="text" id="school name" name="school name" placeholder="Enter Your school.."><br>
+
+    <p>Medium of Study:</p>
+      <input type="radio" id="english" name="medium">English
+      <input type="radio" id="tamil" name="medium">Tamil<br><br><br>
+
+
+    <label for="father name">Father's Name</label><br>
+      <input type="text" id="father name" name="father name" placeholder="Enter Name.."><br>
+
+    <label for="mother name">Mother's Name</label><br>
+      <input type="text" id="mother name" name="mother name" placeholder="Enter Name.."><br>
+
+     <label for ="contactno"> Contact No:</label><br>
+    <input type="text" id="contactno" name="contactno" maxlength="10" placeholder="Enter Your Number.."><br>
+
+ 
+    <center><input type="submit" value="Submit"></center>
+
+
+
+
+
+
+
+      </form>
+  </div>
+</div>
+
+</body>
+</html
