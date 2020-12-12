@@ -40,6 +40,68 @@
 }
     
   </style>
+
+<?php
+$conn=mysqli_connect('127.0.0.1','root','','jsrec');
+if (isset($_POST['submit'])) 
+{
+  $m1=$_POST['m1'];
+  $m2=$_POST['m2'];
+  $m3=$_POST['m3'];
+  $m4=$_POST['m4'];
+  $m5=$_POST['m5'];
+  $m6=$_POST['m6'];
+  $m7=$_POST['m7'];
+  $m8=$_POST['m8'];
+  $t1=$_POST['t1'];
+  $t2=$_POST['t2'];
+  $t3=$_POST['t3'];
+  $t4=$_POST['t4'];
+  $t5=$_POST['t5'];
+  $t6=$_POST['t6'];
+  $t7=$_POST['t7'];
+  $t8=$_POST['t8'];
+  $w1=$_POST['w1'];
+  $w2=$_POST['w2'];
+  $w3=$_POST['w3'];
+  $w4=$_POST['w4'];
+  $w5=$_POST['w5'];
+  $w6=$_POST['w6'];
+  $w7=$_POST['w7'];
+  $w8=$_POST['w8'];
+  $tu1=$_POST['tu1'];
+  $tu2=$_POST['tu2'];
+  $tu3=$_POST['tu3'];
+  $tu4=$_POST['tu4'];
+  $tu5=$_POST['tu5'];
+  $tu6=$_POST['tu6'];
+  $tu7=$_POST['tu7'];
+  $tu8=$_POST['tu8'];
+  $f1=$_POST['f1'];
+  $f2=$_POST['f2'];
+  $f3=$_POST['f3'];
+  $f4=$_POST['f4'];
+  $f5=$_POST['f5'];
+  $f6=$_POST['f6'];
+  $f7=$_POST['f7'];
+  $f8=$_POST['f8'];
+  $s1=$_POST['s1'];
+  $s2=$_POST['s2'];
+  $s3=$_POST['s3'];
+
+  $sql="INSERT INTO cse_timetable(m1,m2,m3,m4,m5,m6,m7,m8,t1,t2,t3,t4,t5,t6,t7,t8,w1,w2,w3,w4,w5,w6,w7,w8,tu1,tu2,tu3,tu4,tu5,tu6,tu7,tu8,f1,f2,f3,f4,f5,f6,f7,f8) VALUES('$m1','$m2','$m3','$m4','$m5','$m6','$m7','$m8','$t1','$t2','$t3','$t4','$t5','$t6','$t7','$t8','$w1','$w2','$w3','$w4','$w5','$w6','$w7','$w8','$tu1','$tu2','$tu3','$tu4','$tu5','$tu6','$tu7','$tu8','$f1','$f2','$f3','$f4','$f5','$f6','$f7','$f8')";
+  if(mysqli_query($conn,$sql))
+  {
+    echo "<script> alert('Your data  stored')</script> ";
+  }
+  else
+  {
+    echo "Data not save" . mysqli_error($conn);
+  }
+mysqli_close($conn);
+}
+?>
+
 </head>
 
 <body>
@@ -61,7 +123,7 @@
 
           <li class="active"><a href="studentinfoo.php">Student details</a></li>
           
-          <li><a href="team.html" class="active" >Timetable</a></li>
+          <li><a href="team.php" class="active" >Timetable</a></li>
           <li><a href="blog.html">Result</a></li>
           <li class="drop-down"><a href="">Department</a>
             <ul>
@@ -145,82 +207,96 @@
     <tr>
       <td align="center" height="50"><b>Monday</b></td>
       <td align="center" height="50"><input type="text" name="m1" style="border: none;outline: none;" > </td>
-            <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+            <td align="center" height="50"><input type="text" name="m2" style="border: none;outline: none;" ></td>
             <td rowspan="6" align="center" height="50"><h2>B<br>R<br>E<br>A<br>K<br></h2></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="m3" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="m4" style="border: none;outline: none;" ></td>
        <td rowspan="6" align="center" height="50"><h2>L<br>U<br>N<br>C<br>H<br></h2></td>
-       <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+       <td align="center" height="50"><input type="text" name="m5" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="m6" style="border: none;outline: none;" ></td>
        <td rowspan="6" align="center" height="50"><h2>B<br>R<br>E<br>A<br>K<br></h2></td>
-         <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-          <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+         <td align="center" height="50"><input type="text" name="m7" style="border: none;outline: none;" ></td>
+          <td align="center" height="50"><input type="text" name="m8" style="border: none;outline: none;" ></td>
       </tr>
 
 
           <tr>
       <td align="center" height="50"><b>Tuesday</b></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-             <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-       <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-         <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-          <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-           <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="t1" style="border: none;outline: none;" ></td>
+             <td align="center" height="50"><input type="text" name="t2" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="t3" style="border: none;outline: none;" ></td>
+       <td align="center" height="50"><input type="text" name="t4" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="t5" style="border: none;outline: none;" ></td>
+         <td align="center" height="50"><input type="text" name="t6" style="border: none;outline: none;" ></td>
+          <td align="center" height="50"><input type="text" name="t7" style="border: none;outline: none;" ></td>
+           <td align="center" height="50"><input type="text" name="t8" style="border: none;outline: none;" ></td>
 
       </tr>
 
        <tr>
       <td align="center" height="50"><b>Wednesday</b></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-             <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-       <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-         <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-          <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-           <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="w1" style="border: none;outline: none;" ></td>
+             <td align="center" height="50"><input type="text" name="w2" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="w3" style="border: none;outline: none;" ></td>
+       <td align="center" height="50"><input type="text" name="w4" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="w5" style="border: none;outline: none;" ></td>
+         <td align="center" height="50"><input type="text" name="w6" style="border: none;outline: none;" ></td>
+          <td align="center" height="50"><input type="text" name="w7" style="border: none;outline: none;" ></td>
+           <td align="center" height="50"><input type="text" name="w8" style="border: none;outline: none;" ></td>
 
       </tr>
 
             <tr>
       <td align="center" height="50"><b>Thursday</b></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-             <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-       <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-         <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-          <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-          <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="tu1" style="border: none;outline: none;" ></td>
+             <td align="center" height="50"><input type="text" name="tu2" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="tu3" style="border: none;outline: none;" ></td>
+       <td align="center" height="50"><input type="text" name="tu4" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="tu5" style="border: none;outline: none;" ></td>
+         <td align="center" height="50"><input type="text" name="tu6" style="border: none;outline: none;" ></td>
+          <td align="center" height="50"><input type="text" name="tu7" style="border: none;outline: none;" ></td>
+          <td align="center" height="50"><input type="text" name="tu8" style="border: none;outline: none;" ></td>
 
       </tr>
 
 
       <tr>
       <td align="center" height="50"><b>Friday</b></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-             <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-       <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-         <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-          <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-       <td align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="f1" style="border: none;outline: none;" ></td>
+             <td align="center" height="50"><input type="text" name="f2" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="f3" style="border: none;outline: none;" ></td>
+       <td align="center" height="50"><input type="text" name="f4" style="border: none;outline: none;" ></td>
+      <td align="center" height="50"><input type="text" name="f5" style="border: none;outline: none;" ></td>
+         <td align="center" height="50"><input type="text" name="f6" style="border: none;outline: none;" ></td>
+          <td align="center" height="50"><input type="text" name="f7" style="border: none;outline: none;" ></td>
+       <td align="center" height="50"><input type="text" name="f8" style="border: none;outline: none;" ></td>
 
       </tr>
 
 
       <tr>
       <td align="center" height="50"><b>Saturday</b></td>
-      <td  colspan="2" align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-      <td colspan="2" align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
-            <td  colspan="2" align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
+      <td  colspan="2" align="center" height="50"><input type="text" name="s1" style="border: none;outline: none;" ></td>
+      <td colspan="2" align="center" height="50"><input type="text" name="s2" style="border: none;outline: none;" ></td>
+            <td  colspan="2" align="center" height="50"><input type="text" name="s3" style="border: none;outline: none;" ></td>
       <td colspan="2" align="center" height="50"><input type="text" name="" style="border: none;outline: none;" ></td>
 
       </tr>
     </table>
+    <input type="submit" name="upload" id="bt2" onclick="setVisibility2('upload');"  value='UPLOAD' style=" background-color:#1ebcea; /* Green */
+  border: none;
+    border-radius:6px; 
+
+  color: white;
+  padding: 10px;
+  width: 100px;
+  height:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;"></button></h2>
         
 
       </div>
